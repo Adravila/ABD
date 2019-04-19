@@ -32,6 +32,19 @@ CREATE TABLE Proyecto (
 	constraint fk_proyecto_laboratorio FOREIGN KEY (id_proyecto) REFERENCES Laboratorio(id_laboratorio)	
 );
 
+DROP TABLE IF EXISTS Inventario;
+CREATE TABLE Inventario (
+	id_inventario BIGINT,
+	nombre VARCHAR(100),
+	descripcion VARCHAR(240),
+	fecha_alta DATE,
+	fecha_retirada DATE,
+	stock INTEGER,
+	id_proyecto BIGINT,
+	constraint pk_inventario PRIMARY KEY (id_inventario),
+	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
+);
+
 DROP TABLE IF EXISTS Tribunal;
 CREATE TABLE Tribunal (
 	fecha_aprobacion DATE,
