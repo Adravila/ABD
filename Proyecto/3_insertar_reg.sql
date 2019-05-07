@@ -87,13 +87,16 @@ INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3,1);
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',4,1);
 
+-- Inserción de los datos del inventario de todos los proyectos existentes
 INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
 INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
 INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
 INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
 
+-- Inserción de los datos de las fechas de acuerdo y aprobación para la realización del proyecto
 INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto) VALUES ('03-05-21',3,1);
 
+-- Inserción de los datos de los distintos laboratorios que hay por cada ciudad, puede haber algunos en la misma ciudad dando otra dirección
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ San Pedro 21',4,29001);
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid Nº 3',4,29002);
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Cruz 13',1,12414);
