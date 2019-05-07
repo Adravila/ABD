@@ -72,6 +72,7 @@ CREATE TABLE Persona (
 	apellidos VARCHAR(50),
 	direccion VARCHAR(100),
 	telefono VARCHAR(20),
+	ciudad VARCHAR(50),
 	constraint pk_DNIe PRIMARY KEY (DNIe)
 );
 
