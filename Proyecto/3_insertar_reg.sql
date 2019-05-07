@@ -21,25 +21,25 @@ INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Ceuta','n/a',51
 INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Melilla','n/a',52001);
 
 -- Inserción de los datos de las personas (personas que SÍ son empleados)
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('76444759G','Adrián','Dávila','Puerto Real','C/ Tomillo 13', '666888601');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('17127531H','José','Gómez','Cádiz','C/ Real 13', '666888602');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('94912431F','María','Arias','Madrid','C/ Falsa 13', '666888603');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('88543331F','Esther','Pérez','Valencia','C/ Falsa 13', '666888604');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('81000114V','Gema','Benítez','Chicalana','C/ Falsa 13', '666888605');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('41294942F','Anna','Bernal','Córdoba','C/ Falsa 13', '666888606');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('44441134F','David','Guerra','Granada','C/ Falsa 13', '666888607');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('85823411B','Ismael','Broncano','Vejer de la Frontera','C/ Falsa 13', '666888608');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('15122234G','Joaquín','Paniagua','Jerez de la Frontera','C/ Falsa 13', '666888609');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('99947321V','Luis','Hernández','Madrid','C/ Falsa 13', '666888610');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('99177422A','Marisa','López','Puerto Real','C/ Falsa 13', '666888611');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('44488212E','Samantha','Quiros','Cádiz','C/ Falsa 13', '666888612');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('98764832B','Francisco','Álvarez','Málaga','C/ Falsa 13', '666888613');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('76533759Z','Ernesto','Pérez','Barcelona','C/ Falsa 13', '666888614');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('76446532X','Andrés','López','La Coruña','C/ Falsa 13', '666888615');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('63244759G','Miguel','Anillo','Madrid','C/ Falsa 13', '666888616');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('11154759R','Laura','Ramírez','Salamanca','C/ Falsa 13', '666888617');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('78913943O','Catalina','Guerra','Sevilla','C/ Falsa 13', '666888618');
-INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('87774339F','María Isabel','Bernal','Sevilla','C/ Falsa 13', '666888619');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('76444759G','Adrián','Dávila','Puerto Real','C/ Tomillo 13', '666888601');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('17127531H','José','Gómez','Cádiz','C/ Real 13', '666888602');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('94912431F','María','Arias','Madrid','C/ Falsa 13', '666888603');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('88543331F','Esther','Pérez','Valencia','C/ Falsa 13', '666888604');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('81000114V','Gema','Benítez','Chicalana','C/ Falsa 13', '666888605');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('41294942F','Anna','Bernal','Córdoba','C/ Falsa 13', '666888606');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('44441134F','David','Guerra','Granada','C/ Falsa 13', '666888607');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('85823411B','Ismael','Broncano','Vejer de la Frontera','C/ Falsa 13', '666888608');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('15122234G','Joaquín','Paniagua','Jerez de la Frontera','C/ Falsa 13', '666888609');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('99947321V','Luis','Hernández','Madrid','C/ Falsa 13', '666888610');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('99177422A','Marisa','López','Puerto Real','C/ Falsa 13', '666888611');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('44488212E','Samantha','Quiros','Cádiz','C/ Falsa 13', '666888612');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('98764832B','Francisco','Álvarez','Málaga','C/ Falsa 13', '666888613');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('76533759Z','Ernesto','Pérez','Barcelona','C/ Falsa 13', '666888614');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('76446532X','Andrés','López','La Coruña','C/ Falsa 13', '666888615');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('63244759G','Miguel','Anillo','Madrid','C/ Falsa 13', '666888616');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('11154759R','Laura','Ramírez','Salamanca','C/ Falsa 13', '666888617');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('78913943O','Catalina','Guerra','Sevilla','C/ Falsa 13', '666888618');
+INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('87774339F','María Isabel','Bernal','Sevilla','C/ Falsa 13', '666888619');
 
 -- Inserción de los datos de las personas (personas que NO son empleados)
 INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('12312344F','Mario','Gómez','Puerto Real','C/ Tomillo 13', '666888620');
@@ -69,6 +69,13 @@ INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76446532X','55555
 INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('63244759G','66666666666','Desarrollador',3);
 INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('11154759R','77777777777','Desarrollador',1);
 
+-- Inserción de los datos de los empleados
+INSERT INTO no_empleado (DNIe) VALUES ('12312344F');
+INSERT INTO no_empleado (DNIe) VALUES ('12415532A');
+INSERT INTO no_empleado (DNIe) VALUES ('99812412V');
+INSERT INTO no_empleado (DNIe) VALUES ('21413281V');
+INSERT INTO no_empleado (DNIe) VALUES ('12412991A');
+
 -- Inserción de los datos de los distintos proyectos existentes
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Alumbrado solar','prueba','03-05-21','03-05-23','Universidad de Sevilla',4);
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Cádiz',1);
@@ -79,3 +86,17 @@ INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Energías renovables basadas en IoT','prueba','03-05-21','03-05-23','Universidad de Cádiz',15);
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3);
 INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',4);
+
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
+
+INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto) VALUES ('03-05-21',3,1);
+
+INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ San Pedro 21',4,29001);
+INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid Nº 3',4,29002);
+INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid Nº 3',4,29002);
+
+
+                                                                                                     
