@@ -1,24 +1,24 @@
 -- Inserción de los datos de las distintas ciudades de España
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Barbate','Andalucía',11160);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Jerez','Andalucía',11401);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Málaga','Andalucía',29001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Sevilla','Andalucía',41001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Madrid','Comunidad de Madrid',28001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Toledo','Castilla la Mancha',45001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Mijas','Andalucía',29650);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('País Vasco','Abaltzisketa',20269);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('La Coruña','Galicia',15001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Losar de la Vera','Extremadura',10460);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Cáceres','Extremadura',10001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Córdoba','Andalucía',14001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Badajoz','Extremadura',06001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Conil de la Frontera','Andalucía',11140);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Chiclana','Andalucía',11130);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('San Fernando','Andalucía',11100);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Logroño','La Rioja',26001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Valladolid','Castilla y León',47001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Ceuta','n/a',51001);
-INSERT INTO ciudad (nombre, comunidad_auto, cod_postal) VALUES ('Melilla','n/a',52001);
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Barbate','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Jerez','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Málaga','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Sevilla','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Madrid','Comunidad de Madrid');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Toledo','Castilla la Mancha');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Mijas','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('País Vasco','Abaltzisketa');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('La Coruña','Galicia');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Losar de la Vera','Extremadura');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Cáceres','Extremadura');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Córdoba','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Badajoz','Extremadura');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Conil de la Frontera','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Chiclana','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('San Fernando','Andalucía');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Logroño','La Rioja');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Valladolid','Castilla y León');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Ceuta','n/a');
+INSERT INTO ciudad (nombre, comunidad_auto) VALUES ('Melilla','n/a');
 
 -- Inserción de los datos de las personas (personas que SÍ son empleados)
 INSERT INTO persona (DNIe, nombre, apellidos, ciudad, direccion, telefono) VALUES ('76444759G','Adrián','Dávila','Puerto Real','C/ Tomillo 13', '666888601');
@@ -49,25 +49,25 @@ INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUE
 INSERT INTO persona (DNIe, nombre, apellidos, direccion, ciudad, telefono) VALUES ('12412991A','Alonso','Pérez','Chicalana','C/ Falsa 13', '666888624');
 
 -- Inserción de los datos de los empleados
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76444759G','01234567890','Desarrollador',1);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('17127531H','18418248141','Desarrollador',2);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('94912431F','53252351321','Desarrollador',3);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('88543331F','91284771442','Desarrollador',4);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('81000114V','19238126533','Técnico superior',5);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('41294942F','08182480081','Desarrollador',4);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('44441134F','12848191292','Desarrollador',2);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('85823411B','10947102701','Desarrollador',1);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('15122234G','18094047510','Tester',5);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('99947321V','10792427213','Tester',5);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('87774339F','12498129844','Tester',4);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('99177422A','12412512123','Desarrollador',3);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('44488212E','11111111111','Desarrollador',2);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('78913943O','22222222222','Técnico superior',5);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('98764832B','33333333333','Técnico superior',2);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76533759Z','44444444444','Técnico superior',1);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76446532X','55555555555','Desarrollador',1);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('63244759G','66666666666','Desarrollador',3);
-INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('11154759R','77777777777','Desarrollador',1);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76444759G','01234567890','Desarrollador',11);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('17127531H','18418248141','Desarrollador',12);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('94912431F','53252351321','Desarrollador',13);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('88543331F','91284771442','Desarrollador',14);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('81000114V','19238126533','Técnico superior',15);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('41294942F','08182480081','Desarrollador',14);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('44441134F','12848191292','Desarrollador',12);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('85823411B','10947102701','Desarrollador',11);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('15122234G','18094047510','Tester',15);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('99947321V','10792427213','Tester',15);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('87774339F','12498129844','Tester',14);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('99177422A','12412512123','Desarrollador',13);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('44488212E','11111111111','Desarrollador',12);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('78913943O','22222222222','Técnico superior',15);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('98764832B','33333333333','Técnico superior',12);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76533759Z','44444444444','Técnico superior',11);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76446532X','55555555555','Desarrollador',11);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('63244759G','66666666666','Desarrollador',13);
+INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('11154759R','77777777777','Desarrollador',11);
 
 -- Inserción de los datos de los empleados
 INSERT INTO no_empleado (DNIe) VALUES ('12312344F');
@@ -77,26 +77,26 @@ INSERT INTO no_empleado (DNIe) VALUES ('21413281V');
 INSERT INTO no_empleado (DNIe) VALUES ('12412991A');
 
 -- Inserción de los datos de los distintos proyectos existentes
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Alumbrado solar','prueba','03-05-21','03-05-23','Universidad de Sevilla',4);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Cádiz',1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('IoT en carreteras','prueba','03-05-21','03-05-23','Universidad de Castilla-La Mancha',6);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Agricultura inteligente basada en IoT','prueba','03-05-21','03-05-23','Universidad de Extremadura',10);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Control de comercios','prueba','03-05-21','03-05-23','Universidad de Cádiz',2);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Detección de terremotos','prueba','03-05-21','03-05-23','Universidad de Cádiz',14);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Energías renovables basadas en IoT','prueba','03-05-21','03-05-23','Universidad de Cádiz',15);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',4);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Alumbrado solar','prueba','03-05-21','03-05-23','Universidad de Sevilla',4,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Cádiz',1,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en carreteras','prueba','03-05-21','03-05-23','Universidad de Castilla-La Mancha',6,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Agricultura inteligente basada en IoT','prueba','03-05-21','03-05-23','Universidad de Extremadura',10,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Control de comercios','prueba','03-05-21','03-05-23','Universidad de Cádiz',2,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Detección de terremotos','prueba','03-05-21','03-05-23','Universidad de Cádiz',14,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Energías renovables basadas en IoT','prueba','03-05-21','03-05-23','Universidad de Cádiz',15,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',4,1);
 
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condesador','Descripción de Condesador','03-05-21','03-05-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,10);
 
 INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto) VALUES ('03-05-21',3,1);
 
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ San Pedro 21',4,29001);
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid Nº 3',4,29002);
-INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid Nº 3',4,29002);
+INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Cruz 13',1,12414);
 
 
                                                                                                      
