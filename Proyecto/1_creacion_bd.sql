@@ -27,9 +27,10 @@ CREATE TABLE Proyecto (
 	fecha_fin DATE,
 	universidad VARCHAR(50),
 	id_ciudad BIGINT,
+	id_laboratorio BIGINT,
 	constraint pk_proyecto PRIMARY KEY (id_proyecto),
 	constraint fk_proyecto_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
-	constraint fk_proyecto_laboratorio FOREIGN KEY (id_proyecto) REFERENCES Laboratorio(id_laboratorio)	
+	constraint fk_proyecto_laboratorio FOREIGN KEY (id_laboratorio) REFERENCES Laboratorio(id_laboratorio)	
 );
 
 DROP TABLE IF EXISTS Inventario;
@@ -89,7 +90,7 @@ CREATE TABLE Empleado (
 DROP TABLE IF EXISTS No_Empleado;
 CREATE TABLE No_Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
-	num_comentarios INTEGER,
+	num_comentarios INTEGER DEFAULT 0,
 	constraint pk_no_empleado PRIMARY KEY (DNIe)
 );
 
