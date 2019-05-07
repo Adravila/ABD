@@ -5,7 +5,6 @@ CREATE TABLE Ciudad (
 	id_ciudad BIGINT AUTO_INCREMENT,
 	nombre VARCHAR(50),
 	comunidad_auto VARCHAR(50),
-	cod_postal INTEGER(6),
 	constraint pk_ciudad PRIMARY KEY (id_ciudad)
 );
 
@@ -13,6 +12,7 @@ DROP TABLE IF EXISTS Laboratorio;
 CREATE TABLE Laboratorio (
 	id_laboratorio BIGINT AUTO_INCREMENT,
 	direccion VARCHAR(100),
+	cod_postal INTEGER(6),
 	id_ciudad BIGINT,
 	constraint pk_laboratorio PRIMARY KEY (id_laboratorio),
 	constraint fk_laboratorio_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad)
@@ -89,6 +89,7 @@ CREATE TABLE Empleado (
 DROP TABLE IF EXISTS No_Empleado;
 CREATE TABLE No_Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
+	num_comentarios INTEGER,
 	constraint pk_no_empleado PRIMARY KEY (DNIe)
 );
 
