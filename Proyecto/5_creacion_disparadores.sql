@@ -26,7 +26,7 @@ CREATE TRIGGER inventary_after_insert
 BEGIN
 	DECLARE vUser varchar(50);
     SELECT USER() INTO vUser;
-    INSERT INTO auditoria_inventario SET accion = 'insert', DNIe = NEW.emp_no, nombre = OLD.nombre, apellidos = OLD.apellidos, fecha = NOW(), usuario = vUser; 
+    INSERT INTO auditoria_inventario SET accion = 'insert', DNIe = NEW.emp_no, nombre = NEW.nombre, apellidos = NEW.apellidos, fecha = NOW(), usuario = vUser; 
 END$$
 
 DELIMITER ;
