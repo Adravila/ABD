@@ -103,4 +103,5 @@ INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto) VALUES ('03-05-
 
 INSERT INTO feedback (comentario, fecha, id_proyecto, DNIe) VALUES ("Estaría bien añadir Dijkstra en lugar de Floyd, ya que lo que vas a empezar desde un origen para calcular las distintas rutas posibles y no a partir de varios.",'03-05-21',3,'99812412V');
 INSERT INTO feedback (comentario, fecha, id_proyecto, DNIe) VALUES ("Sería una mejor opción utilizar un radar que detecte la matrícula y la velocidad del vehículo, de esta manera podrás hacer una media a partir del número de sensores que se esté utilizando de los vehículos que vayan pasando por la ruta. Utilizar varios sensores de movimiento en la carretera sería algo bastante costoso y puede dar muchos problemas.",'03-05-21',3,'99812412V');
+INSERT INTO feedback (comentario, fecha, id_proyecto, DNIe) VALUES ("¿Habéis considerado en ubicar el sensor en un lugar más estable en cuanto a la temperatura de la ubicación? De no ser así podría dadr problemas dependiendo del clima del lugar.",'05-05-21',4,'15122234G');
                                                                                                      
