@@ -1,9 +1,7 @@
 -- Creación de una auditoría para tener el control del sistema
 CREATE TABLE auditoria_inventario (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    DNIe VARCHAR(9)  NOT NULL,
-    nombre VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(50) NOT NULL,
+    id_inventario BIGINT NOT NULL,
     fecha DATETIME DEFAULT NULL,
     accion VARCHAR(50) DEFAULT NULL,
     usuario VARCHAR(50) DEFAULT NULL
@@ -27,7 +25,7 @@ CREATE TRIGGER inventary_after_insert
 BEGIN
 	DECLARE vUser varchar(50);
     SELECT USER() INTO vUser;
-    INSERT INTO auditoria_inventario SET accion = 'insert', id_inventario = NEW.id_inventario, fecha = NOW(), usuario = vUser; 
+	    INSERT INTO auditoria_inventario SET accion = 'insert', id_inventario = NEW.id_inventario, fecha = NOW(), usuario = vUser; 
 END$$
 
 DELIMITER ;
