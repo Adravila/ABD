@@ -16,9 +16,7 @@ CREATE TRIGGER before_inventary_update
 BEGIN
 DECLARE vUser varchar(50);
     SELECT USER() INTO vUser;
-    INSERT INTO auditoria_inventario SET accion = 'update', DNIe = OLD.DNIe, nombre = OLD.nombre, apellidos = OLD.apellidos, 
-	fecha = NOW(), usuario = vUser;
-	
+    INSERT INTO auditoria_inventario SET accion = 'update', id_inventario = OLD.id_inventario, fecha = NOW(), usuario = vUser;
 END$$
 DELIMITER ;
 
@@ -29,7 +27,7 @@ CREATE TRIGGER inventary_after_insert
 BEGIN
 	DECLARE vUser varchar(50);
     SELECT USER() INTO vUser;
-    INSERT INTO auditoria_inventario SET accion = 'insert', DNIe = NEW.emp_no, nombre = NEW.nombre, apellidos = NEW.apellidos, fecha = NOW(), usuario = vUser; 
+    INSERT INTO auditoria_inventario SET accion = 'insert', id_inventario = NEW.id_inventario, fecha = NOW(), usuario = vUser; 
 END$$
 
 DELIMITER ;
