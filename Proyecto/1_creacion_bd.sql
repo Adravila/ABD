@@ -1,4 +1,5 @@
 CREATE DATABASE ES_Smartcity;
+use ES_Smartcity;
 
 DROP TABLE IF EXISTS Ciudad;
 CREATE TABLE Ciudad (
@@ -7,6 +8,8 @@ CREATE TABLE Ciudad (
 	comunidad_auto VARCHAR(50),
 	constraint pk_ciudad PRIMARY KEY (id_ciudad)
 );
+
+ALTER TABLE Ciudad AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Laboratorio;
 CREATE TABLE Laboratorio (
@@ -17,6 +20,8 @@ CREATE TABLE Laboratorio (
 	constraint pk_laboratorio PRIMARY KEY (id_laboratorio),
 	constraint fk_laboratorio_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad)
 );
+
+ALTER TABLE Laboratorio AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Proyecto;
 CREATE TABLE Proyecto (
@@ -33,6 +38,8 @@ CREATE TABLE Proyecto (
 	constraint fk_proyecto_laboratorio FOREIGN KEY (id_laboratorio) REFERENCES Laboratorio(id_laboratorio)	
 );
 
+ALTER TABLE Proyecto AUTO_INCREMENT = 1;
+
 DROP TABLE IF EXISTS Inventario;
 CREATE TABLE Inventario (
 	id_inventario BIGINT AUTO_INCREMENT,
@@ -46,6 +53,8 @@ CREATE TABLE Inventario (
 	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
+ALTER TABLE Inventario AUTO_INCREMENT = 1;
+
 DROP TABLE IF EXISTS Tribunal;
 CREATE TABLE Tribunal (
 	fecha_aprobacion DATE,
@@ -56,15 +65,7 @@ CREATE TABLE Tribunal (
 	constraint fk_tribunal_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
-DROP TABLE IF EXISTS Feedback;
-CREATE TABLE Feedback (
-	id_feedback BIGINT AUTO_INCREMENT,
-	comentario VARCHAR(500),
-	fecha DATE,
-	id_proyecto BIGINT, 
-	constraint pk_feedback PRIMARY KEY (id_feedback),
-	constraint fk_feedback_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)	
-);
+ALTER TABLE Tribunal AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Persona;
 CREATE TABLE Persona (
@@ -77,6 +78,8 @@ CREATE TABLE Persona (
 	constraint pk_DNIe PRIMARY KEY (DNIe)
 );
 
+ALTER TABLE Persona AUTO_INCREMENT = 1;
+
 DROP TABLE IF EXISTS Empleado;
 CREATE TABLE Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
@@ -87,10 +90,27 @@ CREATE TABLE Empleado (
 	constraint fk_empleado_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
+ALTER TABLE Empleado AUTO_INCREMENT = 1;
+
 DROP TABLE IF EXISTS No_Empleado;
 CREATE TABLE No_Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
-	num_comentarios INTEGER DEFAULT 0,
 	constraint pk_no_empleado PRIMARY KEY (DNIe)
 );
+
+ALTER TABLE No_Empleado AUTO_INCREMENT = 1;
+
+DROP TABLE IF EXISTS Feedback;
+CREATE TABLE Feedback (
+	id_feedback BIGINT AUTO_INCREMENT,
+	comentario VARCHAR(500),
+	fecha DATE,
+	id_proyecto BIGINT, 
+	DNIe VARCHAR(9),
+	constraint pk_feedback PRIMARY KEY (id_feedback),
+	constraint fk_feedback_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto),	
+	constraint fk_feedback_persona FOREIGN KEY (DNIe) REFERENCES Persona(DNIe)	
+);
+
+ALTER TABLE Feedback AUTO_INCREMENT = 1;
 
