@@ -31,6 +31,7 @@ CREATE TABLE Proyecto (
 	fecha_ini DATE,
 	fecha_fin DATE,
 	universidad VARCHAR(50),
+	presupuesto DOUBLE,
 	id_ciudad BIGINT,
 	id_laboratorio BIGINT,
 	constraint pk_proyecto PRIMARY KEY (id_proyecto),
@@ -42,25 +43,34 @@ ALTER TABLE Proyecto AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Inventario;
 CREATE TABLE Inventario (
-	id_inventario BIGINT AUTO_INCREMENT,
+	id_proyecto BIGINT,
+	constraint pk_inventario PRIMARY KEY (id_proyecto),
+	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
+);
+
+ALTER TABLE Inventario AUTO_INCREMENT = 1;
+
+DROP TABLE IF EXISTS Componente;
+CREATE TABLE Componente (
+	id_componente BIGINT AUTO_INCREMENT,
 	nombre VARCHAR(100),
 	descripcion VARCHAR(240),
 	fecha_alta DATE,
 	fecha_retirada DATE,
 	stock INTEGER,
 	id_proyecto BIGINT,
-	constraint pk_inventario PRIMARY KEY (id_inventario),
-	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
+	constraint pk_componente PRIMARY KEY (id_componente),
+	constraint fk_componente_inventario FOREIGN KEY (id_proyecto) REFERENCES Inventario(id_proyecto)
 );
 
-ALTER TABLE Inventario AUTO_INCREMENT = 1;
+ALTER TABLE Componente AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Tribunal;
 CREATE TABLE Tribunal (
 	fecha_aprobacion DATE,
 	id_ciudad BIGINT,
 	id_proyecto BIGINT,
-	determinacion VARCHAR, 
+	decision ENUM('Aceptado','Denegado''En espera'), 
 	constraint pk_fecha_aprobacion PRIMARY KEY (fecha_aprobacion),
 	constraint fk_tribunal_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
 	constraint fk_tribunal_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
@@ -84,14 +94,29 @@ ALTER TABLE Persona AUTO_INCREMENT = 1;
 DROP TABLE IF EXISTS Empleado;
 CREATE TABLE Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
-	num_ss VARCHAR(20),
+	num_ss VARCHAR(20) UNIQUE,
 	rol VARCHAR(50),
 	id_proyecto BIGINT,
+	id_laboratorio BIGINT,
 	constraint pk_empleado PRIMARY KEY (DNIe,id_proyecto),
+	constraint fk_empleado_laboratorio FOREIGN KEY (id_laboratorio) REFERENCES Laboratorio(id_laboratorio),
 	constraint fk_empleado_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
 ALTER TABLE Empleado AUTO_INCREMENT = 1;
+
+DROP TABLE IF EXISTS Salario;
+CREATE TABLE Salario (
+	id_salario BIGINT AUTO_INCREMENT,
+	num_ss VARCHAR(20),
+	salario DOUBLE,
+	fecha_inicio DATE,
+	fecha_fin DATE,
+	constraint DNIe PRIMARY KEY (id_salario),
+	constraint fk_sueldo_empleado FOREIGN KEY (num_ss) REFERENCES Empleado(num_ss)
+);
+
+ALTER TABLE Salario AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS No_Empleado;
 CREATE TABLE No_Empleado (
