@@ -60,6 +60,7 @@ CREATE TABLE Tribunal (
 	fecha_aprobacion DATE,
 	id_ciudad BIGINT,
 	id_proyecto BIGINT,
+	determinacion VARCHAR, 
 	constraint pk_fecha_aprobacion PRIMARY KEY (fecha_aprobacion),
 	constraint fk_tribunal_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
 	constraint fk_tribunal_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
