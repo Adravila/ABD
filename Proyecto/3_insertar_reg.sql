@@ -54,15 +54,15 @@ INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Madrid N�
 INSERT INTO laboratorio (direccion, id_ciudad, cod_postal) VALUES ('C/ Cruz 13',1,12414);
 
 -- Inserción de los datos de los distintos proyectos existentes
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Alumbrado solar','prueba','03-05-21','03-05-23','Universidad de Sevilla',4,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Cádiz',1,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en carreteras','prueba','03-05-21','03-05-23','Universidad de Castilla-La Mancha',6,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Agricultura inteligente basada en IoT','prueba','03-05-21','03-05-23','Universidad de Extremadura',10,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Control de comercios','prueba','03-05-21','03-05-23','Universidad de Cádiz',2,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Detección de terremotos','prueba','03-05-21','03-05-23','Universidad de Cádiz',14,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Energías renovables basadas en IoT','prueba','03-05-21','03-05-23','Universidad de Cádiz',15,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3,1);
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, id_ciudad, id_laboratorio) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',4,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Alumbrado solar','prueba','03-05-21','03-05-23','Universidad de Sevilla',1000000,4,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Cádiz',2000000,1,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('IoT en carreteras','prueba','03-05-21','03-05-23','Universidad de Castilla-La Mancha',3000000,6,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Agricultura inteligente basada en IoT','prueba','03-05-21','03-05-23','Universidad de Extremadura',2100000,10,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Control de comercios','prueba','03-05-21','03-05-23','Universidad de Cádiz',1100000,2,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Detección de terremotos','prueba','03-05-21','03-05-23','Universidad de Cádiz',2100400,14,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Energías renovables basadas en IoT','prueba','03-05-21','03-05-23','Universidad de Cádiz',4100400,15,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('IoT en cañerías','prueba','03-05-21','03-05-23','Universidad de Málaga',3100100,3,1);
+INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Control de tráfico','prueba','03-05-21','03-05-23','Universidad de Sevilla',1000000,4,1);
 
 -- Inserción de los datos de los empleados
 INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76444759G','01234567890','Desarrollador',1);
@@ -85,6 +85,27 @@ INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('76446532X','55555
 INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('63244759G','66666666666','Desarrollador',3);
 INSERT INTO empleado (DNIe, num_ss, rol, id_proyecto) VALUES ('11154759R','77777777777','Desarrollador',1);
 
+-- Inserción de los datos de los salarios de los empleados
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('01234567890',12000,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('18418248141',11000,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('53252351321',13000,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('91284771442',12400,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('19238126533',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('08182480081',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('12848191292',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('10947102701',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('18094047510',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('10792427213',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('12498129844',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('12412512123',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('11111111111',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('22222222222',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('33333333333',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('44444444444',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('55555555555',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('66666666666',11105,'2019-05-17','9999-01-01');
+INSERT INTO salario (num_ss, salario, fecha_inicio, fecha_fin) VALUES ('77777777777',11105,'2019-05-17','9999-01-01');
+
 -- Inserción de los datos de los empleados
 INSERT INTO no_empleado (DNIe) VALUES ('12312344F');
 INSERT INTO no_empleado (DNIe) VALUES ('12415532A');
@@ -99,7 +120,7 @@ INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, 
 INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,1);
 
 -- Inserción de los datos de las fechas de acuerdo y aprobación para la realización del proyecto
-INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto) VALUES ('03-05-21',3,1);
+INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto, decision) VALUES ('03-05-21',3,1,'Aceptado');
 
 INSERT INTO feedback (comentario, fecha, id_proyecto, DNIe) VALUES ("Estaría bien añadir Dijkstra en lugar de Floyd, ya que lo que vas a empezar desde un origen para calcular las distintas rutas posibles y no a partir de varios.",'03-05-21',3,'99812412V');
 INSERT INTO feedback (comentario, fecha, id_proyecto, DNIe) VALUES ("Sería una mejor opción utilizar un radar que detecte la matrícula y la velocidad del vehículo, de esta manera podrás hacer una media a partir del número de sensores que se esté utilizando de los vehículos que vayan pasando por la ruta. Utilizar varios sensores de movimiento en la carretera sería algo bastante costoso y puede dar muchos problemas.",'03-05-21',3,'99812412V');
