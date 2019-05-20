@@ -12,3 +12,12 @@ DELIMITER //
 	return dias;
 	END
 //
+
+-- Procedimiento que devuelve los comentarios que tiene un proyecto indicado
+
+DELIMITER //
+	CREATE PROCEDURE comentarios (IN id INTEGER)
+	BEGIN
+	SELECT comentario FROM feedback WHERE id_proyecto = id;
+	END
+//
