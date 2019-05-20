@@ -1,0 +1,3 @@
+Usaremos una transacción para eliminar un proyecto que ha sido cancelado, eliminando asi su feedback.
+
+Usaremos transacciones para la manipulacion de la tabla inventario.
