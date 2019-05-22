@@ -67,11 +67,12 @@ ALTER TABLE Componente AUTO_INCREMENT = 1;
 
 DROP TABLE IF EXISTS Tribunal;
 CREATE TABLE Tribunal (
+	id_tribunal BIGINT AUTO_INCREMENT,
 	fecha_aprobacion DATE,
 	id_ciudad BIGINT,
 	id_proyecto BIGINT,
-	decision ENUM('Aceptado','Denegado''En espera'), 
-	constraint pk_fecha_aprobacion PRIMARY KEY (fecha_aprobacion),
+	decision ENUM('Aceptado','Denegado','En espera'), 
+	constraint pk_tribunal PRIMARY KEY (id_tribunal),
 	constraint fk_tribunal_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
 	constraint fk_tribunal_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
