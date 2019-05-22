@@ -1,8 +1,9 @@
--- Usaremos transacciones para la manipulacion de la tabla componente.
+-- Usamos una transaccion para insertar un componente, modificar el stock y mostrar los componentes
 
 BEGIN;
+INSERT INTO `componente` (`id_componente`, `nombre`, `descripcion`, `fecha_alta`, `fecha_retirada`, `stock`, `id_proyecto`) VALUES (NULL, 'Tornillo ', 'Tornillo para tuberias', '2019-05-08', '2019-05-31', '50', '1');
 UPDATE componente C SET C.stock = C.stock - 1 WHERE C.id_componente = 1;
-UPDATE componente C SET C.stock = C.stock - 1 WHERE C.id_componente = 1;
+SELECT * FROM componente;
 COMMIT;
 
 
