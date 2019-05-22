@@ -9,8 +9,8 @@ COMMIT;
 -- Usamos una transacción a la hora de crear un proyecto, se le asigna un tribunal "En espera"
 
 BEGIN;
-INSERT INTO proyecto (nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES ('Semaforos UCA','prueba','03-05-21','03-05-23','Universidad de Cadiz',1000000,4,1);
-INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto, decision) VALUES ('03-05-21',3,1,'Aceptado');
+INSERT INTO proyecto (id_proyecto, nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES (22,'Semaforos UCA','prueba',NULL,NULL,'Universidad de Cadiz',1000000,4,1);
+INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto, decision) VALUES (NULL,3,22,'En Espera');
 COMMIT;
 
 
