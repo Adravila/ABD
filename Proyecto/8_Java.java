@@ -12,9 +12,7 @@ public class Smart_city{
 					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&sercerTimezone=UTC");
 			statement = connect.createStatement();
 		}catch(Exception e){
-			throw e;
-		}finally{
-			close();
+			System.out.println("No ha sido posible conectarse con la BD");
 		}
 	}
 
@@ -26,7 +24,7 @@ public class Smart_city{
 
 			if(connect != null) {connect.close();}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("No ha sido posible cerrar la conexion con la BD");
 		}
 	}
 
@@ -49,10 +47,8 @@ public class Smart_city{
 			resultSet = preparedStatement.executeQuery();
 			writeResultSet(resultSet);
 		} catch (Exception e){
-			throw e;
-		} finally {
-			close();
-		}
+			System.out.println("No ha sido posible insertar los datos.");
+		} 
 	}
 
 	public void eliminarFeedback(){
@@ -61,21 +57,27 @@ public class Smart_city{
 			prepareStatement.setString(1, "3");
 			prepareStatement.executeUpdate();
 		} catch (Exception e){
-			throw e;
-		} finally {
-			close();
+			System.out.println("No ha sido posible eliminar los datos.");
 		}
 	}
 
 	public void salario(){
 		try{
 			resultSet = statement.executeQuery("select * from es_smartcity.salario");
-			writeMetaData(resulSet);
 			writeResultSet(resulSet);
 		} catch (Exception e){
-			throw e;
-		} finally {
-			close();
+			System.out.println("No ha sido posible mostrar los datos");
+		}
+	}
+
+	public void writeResultSet(ResultSet resulSet) throws SQLException{
+		while(resulSet.next()){
+			System.out.println("Resultado consulta");
+			System.out.println("-----");
+			for(int i=1; i<=resulSet.getMetaData().getColumnCount();i++){
+				System.out.println("Columna " + resulSet.getMetaData().getColumnName(i) + ": " + resulSet.getString(i));
+			}
+			System.out.println("-----------");
 		}
 	}
 
