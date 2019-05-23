@@ -1,12 +1,16 @@
+import java.sql.*;
+import com.mysql.jdbc.PreparedStatement;
+
 public class Smart_city{
 	
 	private Connection connect = null;
 	private Statement statement = null;
 	private ResultSet resultSet = null;
+	private PreparedStatement preparedStatement = null;
 
 	public void readDataBase() throws Exception{
 		try{
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 
 			connect = DriverManager.getConnection("jdbc:myslq://localhost/es_smartcity?user=root&password=toor&"
 					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&sercerTimezone=UTC");
@@ -30,7 +34,7 @@ public class Smart_city{
 
 	public void insertarProyecto(){
 		try{
-			preparedStatement = connect.preparedStatement("insert into es_smartcity.proyecto values (?, ?, ?, ?, ?, ? ,? ,?)");
+			preparedStatement = (PreparedStatement)connect.preparedStatement("insert into es_smartcity.proyecto values (?, ?, ?, ?, ?, ? ,? ,?)");
 
 			preparedStatement.setString(1, "Semaforos avenida principal.");
 			preparedStatement.setString(2, "Control de semaforos en la avenida mas transitada de la ciudad.");
@@ -53,7 +57,7 @@ public class Smart_city{
 
 	public void eliminarFeedback(){
 		try{
-			preparedStatement = connect.prepareStatement("delete from es_smartcity.feedback where id_feedback = ? ;");
+			preparedStatement = (PreparedStatement)connect.prepareStatement("delete from es_smartcity.feedback where id_feedback = ? ;");
 			prepareStatement.setString(1, "3");
 			prepareStatement.executeUpdate();
 		} catch (Exception e){
@@ -81,5 +85,13 @@ public class Smart_city{
 		}
 	}
 
+	public static void main(String args[]) throws SQLException {
+		connection conexion = new connection();
+		conexion.readDataBase();
+		insertarProyecto();
+		eliminarFeedback();
+		salario();
+		conexion.close();
+	}
 
 }
