@@ -1,0 +1,3 @@
+Interacción con proveedores de componentes. Usuario para los proveedores con vistas de la tabla componentes, para asi poder comprobar que componente dispone cada proyecto y el stock de cada uno.
+
+Interaccion con moderador. Moderador de feedback con permisos de consulta, edición y eliminación de la tabla feedback para controlar los comentarios.
