@@ -4,9 +4,9 @@ SELECT num_ss, salario FROM salario WHERE num_ss = ANY(01234567890, 10792427213 
 
 
 
-SELECT nombre FROM persona WHERE apellidos LIKE "Gómez" AND telefono = 666888620 AND ciudad LIKE "Puerto Real";
+SELECT nombre FROM persona WHERE apellidos LIKE "Gómez" AND apellidos LIKE "Muñoz";
 
-SELECT nombre FROM persona Where apellidos LIKE ALL(apellidos LIKE "Gómes", telefono = 666888620, ciudad LIKE "Puerto Real");
+SELECT nombre FROM persona Where apellidos LIKE ALL("Gómez", "Muñoz");
 
 
 SELECT nombre FROM proyecto WHERE universidad LIKE "Universidad de Sevilla" OR universidad LIKE "Universidad de Cádiz";
