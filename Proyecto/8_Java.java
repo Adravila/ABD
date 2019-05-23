@@ -57,7 +57,7 @@ public class Smart_city{
 
 	public void eliminarFeedback(){
 		try{
-			preparedStatement = (PreparedStatement)connect.prepareStatement("delete from es_smartcity.feedback where id_feedback = ? ;");
+			preparedStatement = (PreparedStatement) connect.prepareStatement("delete from es_smartcity.feedback where id_feedback = ? ;");
 			prepareStatement.setString(1, "3");
 			prepareStatement.executeUpdate();
 		} catch (Exception e){
@@ -67,7 +67,8 @@ public class Smart_city{
 
 	public void salario(){
 		try{
-			resultSet = statement.executeQuery("select * from es_smartcity.salario");
+			prepareStatement = (PreparedStatement) statement.prepareStatement("select * from es_smartcity.salario");
+			resulSet = prepareStatement.executeQuery();
 			writeResultSet(resulSet);
 		} catch (Exception e){
 			System.out.println("No ha sido posible mostrar los datos");
