@@ -1,26 +1,26 @@
 import java.sql.*;
-import com.mysql.jdbc.PreparedStatement;
 
-public class Smart_city{
+public class SmartCity{
 	
-	private Connection connect = null;
-	private Statement statement = null;
-	private ResultSet resultSet = null;
-	private PreparedStatement preparedStatement = null;
+	private static Connection connect = null;
+	private static Statement statement = null;
+	private static ResultSet resultSet = null;
+	private static PreparedStatement preparedStatement = null;
 
-	public void readDataBase() throws Exception{
+	public static void readDataBase() throws Exception{
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			connect = DriverManager.getConnection("jdbc:myslq://localhost/es_smartcity?user=root&password=toor&"
-					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&sercerTimezone=UTC");
+			connect = DriverManager.getConnection("jdbc:mysql://localhost/es_smartcity?user=root&password=toor&"
+					+ "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 			statement = connect.createStatement();
 		}catch(Exception e){
+			e.printStackTrace();
 			System.out.println("No ha sido posible conectarse con la BD");
 		}
 	}
 
-	private void close(){
+	private static void close(){
 		try{
 			if(resultSet != null) {resultSet.close();}
 
@@ -32,9 +32,9 @@ public class Smart_city{
 		}
 	}
 
-	public void insertarProyecto(){
+	public static void insertarProyecto(){
 		try{
-			preparedStatement = (PreparedStatement)connect.preparedStatement("insert into es_smartcity.proyecto values (?, ?, ?, ?, ?, ? ,? ,?)");
+			preparedStatement = (PreparedStatement)connect.prepareStatement("insert into es_smartcity.proyecto (nombre, descripcion,fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) values (?, ?, ?, ?, ?, ? ,? ,?)");
 
 			preparedStatement.setString(1, "Semaforos avenida principal.");
 			preparedStatement.setString(2, "Control de semaforos en la avenida mas transitada de la ciudad.");
@@ -47,35 +47,36 @@ public class Smart_city{
 			preparedStatement.executeUpdate();
 
 			//Comprobamos
-			preparedStatement = connect.preparedStatement("Select * from es_smartcity.proyecto");
+			preparedStatement = connect.prepareStatement("Select * from es_smartcity.proyecto");
 			resultSet = preparedStatement.executeQuery();
 			writeResultSet(resultSet);
 		} catch (Exception e){
+			
 			System.out.println("No ha sido posible insertar los datos.");
 		} 
 	}
 
-	public void eliminarFeedback(){
+	public static void eliminarFeedback(){
 		try{
 			preparedStatement = (PreparedStatement) connect.prepareStatement("delete from es_smartcity.feedback where id_feedback = ? ;");
-			prepareStatement.setString(1, "3");
-			prepareStatement.executeUpdate();
+			preparedStatement.setString(1, "3");
+			preparedStatement.executeUpdate();
 		} catch (Exception e){
 			System.out.println("No ha sido posible eliminar los datos.");
 		}
 	}
 
-	public void salario(){
+	public static void salario(){
 		try{
-			prepareStatement = (PreparedStatement) statement.prepareStatement("select * from es_smartcity.salario");
-			resulSet = prepareStatement.executeQuery();
-			writeResultSet(resulSet);
+			preparedStatement = (PreparedStatement) connect.prepareStatement("select * from es_smartcity.salario");
+			resultSet = preparedStatement.executeQuery();
+			writeResultSet(resultSet);
 		} catch (Exception e){
 			System.out.println("No ha sido posible mostrar los datos");
 		}
 	}
 
-	public void writeResultSet(ResultSet resulSet) throws SQLException{
+	public static void writeResultSet(ResultSet resulSet) throws SQLException{
 		while(resulSet.next()){
 			System.out.println("Resultado consulta");
 			System.out.println("-----");
@@ -86,13 +87,12 @@ public class Smart_city{
 		}
 	}
 
-	public static void main(String args[]) throws SQLException {
-		connection conexion = new connection();
-		conexion.readDataBase();
+	public static void main(String args[]) throws Exception {
+		readDataBase();
 		insertarProyecto();
 		eliminarFeedback();
 		salario();
-		conexion.close();
+		close();
 	}
 
 }
