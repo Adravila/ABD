@@ -95,7 +95,7 @@ ALTER TABLE Persona AUTO_INCREMENT = 1;
 DROP TABLE IF EXISTS Empleado;
 CREATE TABLE Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
-	num_ss VARCHAR(20) UNIQUE,
+	num_ss INT(11) UNIQUE,
 	rol VARCHAR(50),
 	id_proyecto BIGINT,
 	id_laboratorio BIGINT,
