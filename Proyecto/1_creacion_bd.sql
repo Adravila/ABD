@@ -35,7 +35,7 @@ CREATE TABLE Proyecto (
 	id_ciudad BIGINT,
 	id_laboratorio BIGINT,
 	constraint pk_proyecto PRIMARY KEY (id_proyecto),
-	constraint fk_proyecto_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
+	--constraint fk_proyecto_ciudad FOREIGN KEY (id_ciudad) REFERENCES Ciudad(id_ciudad),
 	constraint fk_proyecto_laboratorio FOREIGN KEY (id_laboratorio) REFERENCES Laboratorio(id_laboratorio)	
 );
 
