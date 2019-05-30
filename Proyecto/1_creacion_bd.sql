@@ -96,7 +96,7 @@ DROP TABLE IF EXISTS Empleado;
 CREATE TABLE Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
 	num_ss INT(11) UNIQUE,
-	rol VARCHAR(50),
+	rol VARCHAR(25),
 	id_proyecto BIGINT,
 	id_laboratorio BIGINT,
 	constraint pk_empleado PRIMARY KEY (DNIe,id_proyecto),
