@@ -114,10 +114,10 @@ INSERT INTO no_empleado (DNIe) VALUES ('21413281V');
 INSERT INTO no_empleado (DNIe) VALUES ('12412991A');
 
 -- Inserción de los datos del inventario de todos los proyectos existentes
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,1);
-INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador','03-05-21','03-05-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador 1','03-05-21','03-06-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador 2','07-05-21','02-06-23',32,2);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador 3','08-05-21','01-06-23',32,1);
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) VALUES ('Condensador','Descripción de Condensador 4','02-05-21','03-06-23',32,4);
 
 -- Inserción de los datos de las fechas de acuerdo y aprobación para la realización del proyecto
 INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto, decision) VALUES ('03-05-21',3,1,'Aceptado');
