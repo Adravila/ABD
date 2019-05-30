@@ -1,9 +1,10 @@
 -- Usamos una transaccion para insertar un componente, modificar el stock y mostrar los componentes
 
 BEGIN;
-INSERT INTO `componente` (`id_componente`, `nombre`, `descripcion`, `fecha_alta`, `fecha_retirada`, `stock`, `id_proyecto`) VALUES (NULL, 'Tornillo ', 'Tornillo para tuberias', '2019-05-08', '2019-05-31', '50', '1');
-UPDATE componente C SET C.stock = C.stock - 1 WHERE C.id_componente = 1;
-SELECT * FROM componente;
+INSERT INTO inventario (nombre, descripcion, fecha_alta, fecha_retirada, stock, id_proyecto) 
+VALUES ('Tornillo', 'Tornillo para tuberias', '2019-05-08', '2019-05-31', '50', '1');
+UPDATE inventario I SET I.stock = I.stock - 1 WHERE I.id_inventario = 1;
+SELECT * FROM inventario;
 COMMIT;
 
 
@@ -11,9 +12,8 @@ COMMIT;
 
 BEGIN;
 INSERT INTO proyecto (id_proyecto, nombre, descripcion, fecha_ini, fecha_fin, universidad, presupuesto, id_ciudad, id_laboratorio) VALUES (22,'Semaforos UCA','prueba',NULL,NULL,'Universidad de Cadiz',1000000,4,1);
-INSERT INTO tribunal (fecha_aprobacion, id_ciudad , id_proyecto, decision) VALUES (NULL,3,22,'En Espera');
+INSERT INTO tribunal (fecha_publicacion, id_ciudad , id_proyecto, decision) VALUES (NULL,3,22,'En Espera');
 COMMIT;
-
 
 -- Usamos una transacción para insertar un empleado y crearle un registro en la tabla salario.
 
