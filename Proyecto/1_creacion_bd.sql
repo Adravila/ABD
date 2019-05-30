@@ -51,8 +51,8 @@ CREATE TABLE Inventario (
 	fecha_retirada DATE,
 	stock INTEGER,
 	id_proyecto BIGINT,
-	constraint pk_componente PRIMARY KEY (id_inventario),
-	constraint fk_componente_inventario FOREIGN KEY (id_proyecto) REFERENCES Inventario(id_proyecto)
+	constraint pk_inventario PRIMARY KEY (id_inventario),
+	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
 );
 
 CREATE TABLE Tribunal (
