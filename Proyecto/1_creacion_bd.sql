@@ -44,20 +44,14 @@ CREATE TABLE Proyecto (
 );
 
 CREATE TABLE Inventario (
-	id_proyecto BIGINT,
-	constraint pk_inventario PRIMARY KEY (id_proyecto),
-	constraint fk_inventario_proyecto FOREIGN KEY (id_proyecto) REFERENCES Proyecto(id_proyecto)
-);
-
-CREATE TABLE Componente (
-	id_componente BIGINT AUTO_INCREMENT,
+	id_inventario BIGINT AUTO_INCREMENT,
 	nombre VARCHAR(100),
 	descripcion VARCHAR(240),
 	fecha_alta DATE,
 	fecha_retirada DATE,
 	stock INTEGER,
 	id_proyecto BIGINT,
-	constraint pk_componente PRIMARY KEY (id_componente),
+	constraint pk_componente PRIMARY KEY (id_inventario),
 	constraint fk_componente_inventario FOREIGN KEY (id_proyecto) REFERENCES Inventario(id_proyecto)
 );
 
@@ -128,5 +122,4 @@ ALTER TABLE Persona AUTO_INCREMENT = 1;
 ALTER TABLE Laboratorio AUTO_INCREMENT = 1;
 ALTER TABLE Ciudad AUTO_INCREMENT = 1;
 ALTER TABLE Proyecto AUTO_INCREMENT = 1;
-ALTER TABLE Componente AUTO_INCREMENT = 1;
 ALTER TABLE Empleado AUTO_INCREMENT = 1;
