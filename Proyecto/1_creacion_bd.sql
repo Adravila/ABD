@@ -84,7 +84,7 @@ CREATE TABLE Persona (
 
 CREATE TABLE Empleado (
 	DNIe VARCHAR(9) REFERENCES Persona,
-	num_ss INT(11) UNIQUE,
+	num_ss VARCHAR(11) UNIQUE,
 	rol VARCHAR(25),
 	id_proyecto BIGINT,
 	id_laboratorio BIGINT,
