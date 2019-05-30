@@ -95,7 +95,7 @@ CREATE TABLE Empleado (
 
 CREATE TABLE Salario (
 	id_salario BIGINT AUTO_INCREMENT,
-	num_ss INT(11),
+	num_ss VARCHAR(11) UNIQUE,
 	salario DOUBLE,
 	fecha_inicio DATE,
 	fecha_fin DATE,
